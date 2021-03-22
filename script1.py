@@ -97,4 +97,5 @@ if __name__ == "__main__":
     inst = main(ip, cidr)
     networks = inst.no_of_subnets()
     hosts = inst.no_of_hosts()
+
     blocks = inst.host_block_size()
