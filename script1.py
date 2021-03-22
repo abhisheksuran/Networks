@@ -85,7 +85,7 @@ class main:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="THIS SCRIPT OUTPUTS ")
+    parser = argparse.ArgumentParser(description="THIS SCRIPT OUTPUTS TOTAL SUBNETS, HOSTS AND HOST BLOCK SIZE ")
     parser.add_argument('-ip', type=str, required=True, metavar='string_value', help="ENTER IP address")
     parser.add_argument('-c', type=int, required=True, metavar='integer_value', help="Enter CIDR notation for subnet mask")
 
