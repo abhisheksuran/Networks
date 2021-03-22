@@ -1,5 +1,5 @@
 # Networks
-## Contains Scripts related to networking.
+## Contain Scripts related to networking.
 
 ##### Script1
 ```
