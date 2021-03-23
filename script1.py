@@ -10,7 +10,9 @@ class main:
 
     def __init__(self, ip, *args, **kargs):
         self.ip = ip
-        self.ValidateIp()
+        valid = self.ValidateIp()
+        if valid == False:
+            raise Exception("KINDLY ENTER A VALID IP ADDRESS")
         print(args)
         if len(args) > 0:
             #self.subnets = args[0]
@@ -27,7 +29,7 @@ class main:
             return
         changed_bits = self.mask_bit - main.standard_mask_bits[ip_class]
         total_subnets = abs(2 ** changed_bits)
-        print(f"Total possible subnets are {total_subnets}")
+        print(f"Total subnets are {total_subnets}")
         return total_subnets
 
 
@@ -39,7 +41,11 @@ class main:
 
     def host_block_size(self):
         lastoctate_on_bits = self.mask_bit % 8
-        block_size = 256 - main.onbits_to_mask[lastoctate_on_bits]
+
+        if lastoctate_on_bits == 0:
+            block_size = 256
+        else:
+            block_size = 256 - main.onbits_to_mask[lastoctate_on_bits]
         print(f"Block size for the hosts is {block_size}")
         return block_size
 
