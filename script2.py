@@ -124,7 +124,7 @@ class main:
                             ip[2] = 0
                         if ip[1] == octnt:
                             if ip[1] + 2 < oct_val:
-                                p[1] += 1
+                                ip[1] += 1
                                 v = v - 256
                                 return self.add_net(ip, v)
 
