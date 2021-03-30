@@ -13,4 +13,9 @@ optional arguments:
   -c integer_value  Enter CIDR notation for subnet mask 
 
 ```
+##### Script2 (VLSM)
+```
+Variable Length subnet mask
+[INPUT] : Script takes ip address, mask in cidr, number of subnets and hosts per subnet
+[OUTPUT] : Outputs subnets with required hosts in a given network.
 
